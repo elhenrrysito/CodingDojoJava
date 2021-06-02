@@ -11,19 +11,18 @@ public class ListaExcepciones {
         myList.add("Hola Mundo");
         myList.add(48);
         myList.add("Adios Mundo");
-        int index = 0;
 
-        try {
-            for (int i = 0; i < myList.size(); i++) {
-                int castedValue = (int) myList.get(i);
-                index = i;
+        for (int i = 0; i < myList.size(); i++) {
+            try {
+                int castearInteger = (Integer) myList.get(i);
+
+            } catch (Exception e) {
+                System.out.println("Estas casteando mal :(");
+                System.out.println(e);
+                System.out.println("Indice del error: " + i);
+                System.out.println("Valor del indice: " + myList.get(i));
+
             }
-
-        } catch(Exception e) {
-            System.out.println("Estas casteando mal :(");
-            System.out.println("Indice del error: " + index);
-            System.out.println("Valor del indice: " + myList.get(index));
-        
         }
 
         System.out.println("Continuando el codigo babyyyyy! :)");
